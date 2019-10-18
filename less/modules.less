@@ -1,0 +1,168 @@
+// Sign-In modules
+.signInForm {
+  position: fixed;
+  top: 30%; // positioning where on the screen
+  left: 35%; // positioning where on the screen
+  z-index: 9; //  this makes sure this class (SignInForm overlays any other elements in the document
+  display: none; // To display nothing by default, if this isn't stated the module will pop up every time you refresh the page
+
+  // Applied styles to the popup module
+
+  .form-container {
+    max-width: 500px;
+    padding: 10%;
+    background-color: white;
+
+    h1 {
+      text-align: center;
+      font-size: 20px;
+      padding-bottom: 10%;
+      color: #333;
+    }
+
+    .btn {
+      a {
+        color: white;
+        text-decoration: none;
+      }
+      background-color: green;
+      padding: 16px 20px;
+      border: none;
+      cursor: pointer;
+      width: 100%;
+      margin-bottom: 10px;
+      opacity: 0.8;
+
+      &:hover {
+        opacity: 1;
+      }
+    }
+
+    input[type="text"],
+    input[type="password"] {
+      width: 100%;
+      padding: 15px;
+      margin: 5px 0 22px 0;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      background: #f1f1f1;
+    }
+
+    input[type="text"]:focus,
+    input[type="password"]:focus {
+      background-color: #ddd;
+      outline: none;
+    }
+
+    .forget,
+    .create {
+      margin-bottom: 5%;
+      float: right;
+      color: blue;
+      text-decoration: none;
+    }
+
+    .btn-close {
+      a {
+        color: white;
+        text-decoration: none;
+      }
+      background-color: red;
+      padding: 16px 20px;
+      border: none;
+      cursor: pointer;
+      width: 100%;
+      margin-bottom: 10px;
+      opacity: 0.8;
+
+      &:hover {
+        opacity: 1;
+      }
+    }
+  }
+}
+
+// Sign up modules
+.signUpForm {
+  // same snippet from up above but for the signUp module
+  display: none;
+  position: fixed;
+  top: 10%;
+  left: 35%;
+  z-index: 9;
+
+  // Applied styles to the popup
+
+  .form-container {
+    max-width: 500px;
+    padding: 10%;
+    background-color: white;
+
+    h1 {
+      text-align: center;
+      font-size: 20px;
+      padding-bottom: 10%;
+      color: #333;
+    }
+
+    .btn {
+      a {
+        color: white;
+        text-decoration: none;
+      }
+      background-color: green;
+      padding: 16px 20px;
+      border: none;
+      cursor: pointer;
+      width: 100%;
+      margin-bottom: 10px;
+      opacity: 0.8;
+
+      &:hover {
+        opacity: 1;
+      }
+    }
+
+    .btn-close {
+      a {
+        color: white;
+        text-decoration: none;
+      }
+      background-color: red;
+      padding: 16px 20px;
+      border: none;
+      cursor: pointer;
+      width: 100%;
+      margin-bottom: 10px;
+      opacity: 0.8;
+
+      &:hover {
+        opacity: 1;
+      }
+    }
+
+    input[type="text"],
+    input[type="password"] {
+      width: 100%;
+      padding: 15px;
+      margin: 5px 0 22px 0;
+
+      border-radius: 5px;
+      background: #f1f1f1;
+    }
+
+    input[type="text"]:focus,
+    input[type="password"]:focus {
+      background-color: #ddd;
+      outline: none;
+    }
+
+    .forget,
+    .create {
+      margin-bottom: 5%;
+      float: right;
+      color: blue;
+      text-decoration: none;
+    }
+  }
+}

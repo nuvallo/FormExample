@@ -1,0 +1,147 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Restaurant Passport</title>
+    <link rel="stylesheet" href="css/index.css" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Indie+Flower|Roboto"
+      rel="stylesheet"
+    />
+    <script
+      src="https://kit.fontawesome.com/5192607be2.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <!-- Navigation -->
+    <nav class="navbar">
+      <div class="container">
+        <!-- logo -->
+        <a class="logo" href="#">Logo</a>
+        <!-- Links -->
+        <ul class="nav-links">
+          <li><a href="#">Home</a></li>
+          <li><a href="#">About</a></li>
+          <li><a href="#">Careers</a></li>
+          <li><a href="#">Contact</a></li>
+        </ul>
+        <!-- Buttons -->
+        <ul class="SignIn">
+          <li>
+            <!-- Activates the sign in module and closes the SignUp module -->
+            <a onclick="openFormSignIn(), closeFormSignUp()" href="#"
+              >Sign In</a
+            >
+          </li>
+          <li>
+            <!-- Activates the sign in module and closes the SignUp module -->
+            <a onclick="openFormSignUp(), closeFormSignIn()" href="#"
+              >Sign Up</a
+            >
+          </li>
+        </ul>
+      </div>
+    </nav>
+    <!-- You can set these functions on any element to make it close or open -->
+    <section
+      onclick="closeFormSignUp(), closeFormSignIn()"
+      class="Exit-On-Press"
+    >
+      <h1>
+        Click the buttons in Navigation Bar to open modules, or press anywhere
+        to exit modules
+      </h1>
+    </section>
+    <!-- Sign In Form -->
+    <!-- BTW: You can style this however you want, it doesn't have to be a login form. and also you could use this same method to in large images when presed, open card modules and such more more -->
+    <div class="signInForm" id="signInForm">
+      <form class="form-container">
+        <h1>Please Sign In.</h1>
+
+        <input type="text" placeholder="Enter Email" name="email" required />
+
+        <input
+          type="password"
+          placeholder="Enter Password"
+          name="psw"
+          required
+        />
+        <a class="forget" href="#">Forget Password?</a>
+
+        <button type="submit" class="btn">
+          <a href="index.html">Sign In</a>
+        </button>
+        <!-- Closes the SignIn Module -->
+        <button onclick="closeFormSignIn()" type="submit" class="btn-close">
+          <a href="#">Close</a>
+        </button>
+
+        <p>
+          New to blablabla?
+          <!--Activates the SignUp Module and Closes the Sign In Module -->
+          <a
+            onclick="openFormSignUp(), closeFormSignIn()"
+            class="create"
+            href="#"
+            >Create an Account.</a
+          >
+        </p>
+      </form>
+    </div>
+
+    <!-- Sign Up Form-->
+    <div class="SignUpForm" id="SignUpForm">
+      <form class="form-container">
+        <h1>Welcome to Blablabla!</h1>
+
+        <input
+          type="text"
+          placeholder="First Name..."
+          name="firstName"
+          required
+        />
+
+        <input
+          type="text"
+          placeholder="Last Name..."
+          name="lastName"
+          required
+        />
+
+        <input type="text" placeholder="Email..." name="lastName" required />
+
+        <input type="password" placeholder="Password" name="psw" required />
+
+        <input
+          type="password"
+          placeholder="Re-enter Password..."
+          name="confirmPsw"
+          required
+        />
+
+        <button type="submit" class="btn">
+          <a href="index.html">Create Account</a>
+        </button>
+        <!-- Closes SignUp module -->
+        <button onclick="closeFormSignUp()" type="submit" class="btn-close">
+          <a href="#">Close</a>
+        </button>
+
+        <p>
+          Already have an account?
+          <!-- Opens SignIn module and Closes SignUp module -->
+          <a
+            onclick="openFormSignIn(), closeFormSignUp()"
+            class="create"
+            href="#"
+            >Sign in here</a
+          >
+        </p>
+      </form>
+    </div>
+    <!-- Link to JS script -->
+    <script src="js/app.js"></script>
+  </body>
+</html>
